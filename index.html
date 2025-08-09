@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>xX Client Orbit — Mini Dark CRM</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>🚀 xX Client Orbit</h1>
+        <div class="small">Mini CRM — WhatsApp reminders • AI Assistant</div>
+      </div>
+      <div class="controls">
+        <div class="running"><span class="dot"></span> Running</div>
+        <div class="toggle small" title="Dark mode">
+          <label for="darkToggle">Dark</label>
+          <input id="darkToggle" type="checkbox" checked />
+        </div>
+        <button class="btn" id="importSample">Import sample</button>
+        <button class="btn" id="clearAll">Clear</button>
+        <button class="btn primary" id="newCustomerBtn">+ New</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <strong>Customers</strong>
+            <div class="small">Manage payments & reminders</div>
+          </div>
+
+          <div class="addform" id="addForm" style="margin-bottom:10px;display:none">
+            <input id="name" placeholder="Customer name" />
+            <input id="phone" placeholder="Phone (e.g. 919259548311)" />
+            <input id="project" placeholder="Project (e.g. Website)" />
+            <input id="total" type="number" placeholder="Total amount" />
+            <input id="paid" type="number" placeholder="Paid amount" />
+            <div>
+              <button class="btn primary full" id="saveBtn">Save</button>
+              <button class="btn full" id="cancelBtn" style="margin-top:6px">Cancel</button>
+            </div>
+          </div>
+
+          <div class="summary" style="margin-bottom:12px">
+            <div class="stat"><div class="small">Total Income</div><div id="statIncome" class="amt">₹0</div></div>
+            <div class="stat"><div class="small">Total Pending</div><div id="statPending" class="amt">₹0</div></div>
+            <div class="stat"><div class="small">Customers</div><div id="statCount" class="amt">0</div></div>
+          </div>
+
+          <div id="list" class="list"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: AI -->
+      <aside cla
+
